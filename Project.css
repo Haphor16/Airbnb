@@ -1,0 +1,334 @@
+/* RESET & FONTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    color: #222222;
+    background-color: #ffffff;
+}
+
+/* 1. HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #dddddd;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #FF385C;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo span {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.logo .help-text {
+    color: #222222;
+    font-weight: 500;
+    border-left: 1px solid #dddddd;
+    padding-left: 12px;
+    margin-left: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lang-icon {
+    font-size: 16px;
+    cursor: pointer;
+    color: #222222;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #dddddd;
+    padding: 6px 12px;
+    border-radius: 21px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.profile-menu:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-icon {
+    font-size: 24px;
+    color: #717171;
+}
+
+/* 2. HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    background-color: #f7f7f7;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #222222;
+    font-size: 18px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 18px 24px 18px 60px;
+    border-radius: 32px;
+    border: 1px solid #b0b0b0;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #222222;
+}
+
+/* 3. TABS */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f7f7f7;
+}
+
+.tab {
+    padding: 14px 24px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #717171;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab:hover {
+    color: #222222;
+}
+
+.tab.active {
+    color: #222222;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+}
+
+/* 4. LOGIN BANNER */
+.login-banner {
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dddddd;
+}
+
+.banner-text h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.banner-text p {
+    color: #717171;
+    font-size: 14px;
+}
+
+.login-btn {
+    background-color: #222222;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 5. GRID CONTENT */
+.main-content {
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-content h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.guide-card {
+    cursor: pointer;
+}
+
+/* THIS BLOCKS STRETCHING OF LOCAL IMAGES */
+.guide-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #eaeaea; /* Light gray box if image fails to load */
+}
+
+.guide-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #ebebeb;
+    padding: 48px 80px;
+    margin-top: 60px;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #dddddd;
+}
+.footer-column h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.footer-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-column li a {
+    font-size: 14px;
+    color: #222222;
+}
+.footer-column li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    font-size: 14px;
+    color: #222222;
+}
+.footer-legal a {
+    margin-right: 12px;
+}
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+.footer-settings {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+}
+
+/* --- MOBILE BOTTOM NAVIGATION --- */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ededed;
+    height: 65px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #717171;
+    font-weight: 600;
+    gap: 4px;
+}
+.mobile-nav-item.active {
+    color: #FF385C;
+}
+.mobile-nav-item i {
+    font-size: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    .nav-item, .lang-icon {
+        display: none;
+    }
+    .login-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin: 20px;
+    }
+}
